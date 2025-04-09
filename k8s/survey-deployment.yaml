@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: survey-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: survey
+  template:
+    metadata:
+      labels:
+        app: survey
+    spec:
+      containers:
+        - name: survey
+          image: yourusername/student-survey-app
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://<RDS-ENDPOINT>:3306/surveydb
+            - name: SPRING_DATASOURCE_USERNAME
+              value: admin
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: your-password
