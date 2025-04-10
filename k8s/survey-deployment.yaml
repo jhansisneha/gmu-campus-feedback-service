@@ -19,8 +19,8 @@ spec:
             - containerPort: 8080
           env:
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://<RDS-ENDPOINT>:3306/surveydb
+              value: jdbc:mysql://surveydb.cslzkqywwmbl.us-east-1.rds.amazonaws.com:3306/surveydb
             - name: SPRING_DATASOURCE_USERNAME
               value: admin
             - name: SPRING_DATASOURCE_PASSWORD
-              value: your-password
+              value: admin2025
