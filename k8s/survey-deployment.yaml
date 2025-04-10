@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: survey
-          image: yourusername/student-survey-app
+          image: jhansisneha/swe645-hw3:latest
           ports:
             - containerPort: 8080
           env:
