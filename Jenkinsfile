@@ -32,8 +32,15 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                sh 'kubectl apply -f k8s/survey-deployment.yaml'
-                sh 'kubectl apply -f k8s/survey-service.yaml'
+                withCredentials([file(credentialsId: 'kube_config', variable: 'KUBECONFIG_FILE')]) {
+                    sh """
+                        mkdir -p ~/.kube
+                        cp \$KUBECONFIG_FILE ~/.kube/config
+                        chmod 600 ~/.kube/config
+                        kubectl apply -f k8s/survey-deployment.yaml
+                        kubectl apply -f k8s/survey-service.yaml
+                    """
+                }
             }
         }
     }
