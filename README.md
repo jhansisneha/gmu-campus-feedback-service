@@ -1,5 +1,9 @@
 # Student Survey Platform — GMU Campus Visit Feedback System
 
+## 🎥 Demo Video
+
+[Click here to watch the demo](https://drive.google.com/file/d/1QFzyWA0aKvHS_-tgzTckFyOZXurJZfCS/view?usp=sharing)
+
 A Spring Boot microservice for collecting and processing post-visit feedback from prospective students visiting George Mason University.  
 Includes CI/CD pipelines built with Jenkins and deployed on AWS EC2.
 
