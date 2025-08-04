@@ -24,10 +24,3 @@ Includes CI/CD pipelines built with Jenkins and deployed on AWS EC2.
 | Deployment    | JAR via SCP or Docker (optional) |
 
 ---
-
-## How to Run
-
-### Locally (Maven)
-```bash
-./mvnw clean install
-./mvnw spring-boot:run
